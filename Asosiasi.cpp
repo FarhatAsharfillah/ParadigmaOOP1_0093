@@ -52,13 +52,17 @@ void dokter::cetakPasien() {
 }
 
 int main() {
-    dokter* varDokter1 = new dokter ("dr.Budi");
-    dokter* varDokter2 = new dokter ("dr.Tono");
+    dokter* varDokter1 = new dokter("dr.Budi");
+    dokter* varDokter2 = new dokter("dr.Tono");
     pasien* varPasien1 = new pasien("Andi");
     pasien* varPasien2 = new pasien("Lia");
 
-    varDokter1->tambahPasien();
-    varDokter2->tambahPasien();
+    varDokter1->tambahPasien(varPasien1);
+    varDokter1->tambahPasien(varPasien2);
+    varPasien2->tambahPasien(varPasien1);
+
+    varDokter1->cetakPasien();
+    varDokter2->cetakPasien();
     varPasien1->cetakDokter();
     varPasien2->cetakDokter();
 
