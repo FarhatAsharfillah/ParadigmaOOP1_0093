@@ -41,7 +41,7 @@ public:
     }
     string perkenalan()
     {
-        return "Halo, nama saya " + nama + "dari sekolah" + sekolah + "\n\n";
+        return "Hai, nama saya " + nama + "dari sekolah" + sekolah + "\n\n";
     }
 };
 
